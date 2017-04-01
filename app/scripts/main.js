@@ -16,7 +16,7 @@ function onYouTubeIframeAPIReady() {
     events: {
       onReady: function(e) {
         e.target.mute();
-        $('#cover').delay(500).animate({
+        $('#cover').delay(700).animate({
             opacity: '0'
         });
       }
