@@ -1,3 +1,12 @@
+/* CSS Document */
+/*
+  ----------------------------
+  RESET
+  ____________________________
+*/
+body,img,p,h1,h2,h3,h4,h5,h6,form,table,td,ul,ol,li,fieldset { margin:0; padding:0; border:0; }
+p,h1,h2,h3,h4,h5,h6,ul { margin:15px 0; }
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -84,4 +93,101 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+/*------------------------------------------------*/
+
+html, body {
+  height: 100%;
+}
+
+#station {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h1#welcome {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #ff7e00;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border: solid 1px #ff7e00;;
+}
+
+#nav {
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  color: #ff7e00;
+}
+
+#nav li {
+  background-color: rgba(47, 10, 5, 0.69);
+  margin-bottom: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-image: url("../images/scanline.png");
+  background-repeat: repeat;
+}
+
+#nav li:hover {
+  background-color: #fd8901;
+  color: #210704;
+  background-image: none;
+}
+
+#cover {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+}
+
+
+
+/*------------------------------------------------*/
+
+* { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+#video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+  top: 0;
+  color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  #video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
 }
